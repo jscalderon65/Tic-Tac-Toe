@@ -1,0 +1,30 @@
+.NavbarTicTacToe-container{
+    margin-top: 20px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 1fr 30px 1fr;
+    grid-auto-rows: 1fr;
+}
+.NavbarTicTacToe-button{
+    display: flex;
+    justify-content:center;
+    grid-column: 3 span;
+    height:50px;
+}
+.NavbarTicTacToe-user1{
+    display: flex;
+    flex-flow: column;
+}
+
+.NavbarTicTacToe-user2{
+    display: flex;
+    flex-flow: column;
+}
+
+.NavbarTicTacToe-vs{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-size:1rem;
+    font-weight: 900;
+}

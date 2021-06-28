@@ -1,0 +1,50 @@
+.StartZone-container {
+    background-color: #090C10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.StartZone-start {
+    width: 250px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.StartZone-start-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.StartZone-button-in {
+    background: #161B22;
+    border-bottom: 5px solid #0045a6;
+    border-radius: 12px;
+    box-shadow: 2px #090C10;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-family: 'Raleway', Arial, Helvetica;
+    font-size: 28px;
+    height: auto;
+    padding: 20px 20px;
+    text-align: center;
+    transition: all 0.3s ease 0s;
+    width: 120px;
+}
+
+.StartZone-button-in:hover {
+    background: #0096f7;
+}
+
+.StartZone-button-in:active {
+    box-shadow: 2px 2px 2px #777, 0px 0px 35px 0px #00b7f8;
+    border-bottom: 1px solid #0045A6;
+    text-shadow: 0px 0px 5px #fff, 0px 0px 5px #fff;
+    transform: translateY(4px);
+    transition: all 0.1s ease 0s;
+    margin: 80px auto 76px auto;
+}

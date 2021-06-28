@@ -1,0 +1,27 @@
+.WaitRoom-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.WaitRoom-wait-view{
+    padding: 10px;
+}
+.WaitRoom-wait-view-buttons{
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-flow: column;
+    height: 100px;
+}
+.WaitRoom-wait-view-title{
+    font-size:1.5rem;
+    font-weight:bold;
+    text-align:center;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-flow: column;
+    width:200px;
+    height:250px;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,11 @@
+.DontBelong-container{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-flow: column;
+}
+.DontBelong-title{
+    margin-bottom:20px;
+    font-size: 1.5rem;
+    font-weight:900;
+}
