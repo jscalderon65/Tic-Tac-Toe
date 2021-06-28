@@ -7,3 +7,4 @@ export {default as Navbar} from "./Navbar.jsx";
 export {default as ShareGame} from "./ShareGame.jsx";
 export {default as UserInvitation} from "./UserInvitation.jsx";
 export {default as NavbarTicTacToe} from "./NavbarTicTacToe.jsx";
+export {default as OnWinUser} from "./OnWinUser.jsx";

@@ -81,7 +81,7 @@ const WaitRoom = ({ MainData, pathNameState }) => {
   return (
     <div className="OptionsView-container">
       <Navbar/>
-      <div className="WaitRoom-container">
+      <div className="WaitRoom-container animate__animated animate__fadeIn">
         {!isOn ? (
           <UserInvitation pathNameState={pathNameState} Users={Users} onUserIngress={onUserIngress}/>
         ) : (

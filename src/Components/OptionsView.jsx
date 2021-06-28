@@ -33,7 +33,7 @@ const OptionsView = () => {
     <div className="OptionsView-container">
       <Navbar />
       {isOn ? (
-        <div className="OptionsView-options ">
+        <div className="OptionsView-options animate__animated animate__backInUp ">
           <div className="OptionsView-box animate__animated animate__fadeIn">
             <div className="OptionsView-search">
               <input

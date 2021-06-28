@@ -7,9 +7,9 @@ const DontBelong = () => {
     history.push("/options")
   }
   return (
-    <div className="OptionsView-container">
+    <div className="OptionsView-container ">
     <Navbar/>
-    <div className="DontBelong-container">
+    <div className="DontBelong-container animate__animated animate__tada">
       <div className="DontBelong-title">No perteneces a este juego</div>
       <button className="btn btn-danger" onClick={onGoHome}><i class="fas fa-arrow-left"></i> Volver al inicio</button>
     </div>

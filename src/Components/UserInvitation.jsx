@@ -1,7 +1,7 @@
 import React from 'react'
 const UserInvitation = ({Users,onUserIngress}) => {
     return (
-        <div className="UserInvitation-container">
+        <div className="UserInvitation-container animate__animated animate__bounceIn">
         <div className="UserInvitation-title">
         <img src={Users[0].photoUrl} alt={Users[0].name}/>
        <b> {Users[0].name} </b> te esta invitando a una partida

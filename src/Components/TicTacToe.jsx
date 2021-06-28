@@ -12,6 +12,7 @@ import {
   Navbar,
   StartZone,
   NavbarTicTacToe,
+  OnWinUser,
 } from "./index.js";
 import { useLocation } from "react-router-dom";
 import { useHistory } from "react-router-dom";
@@ -25,12 +26,15 @@ const TicTacToe = ({ MainData }) => {
   const [turnState, setTurnState] = useState(NumberState);
   const [pathNameState] = useState(pathname.split("/")[2]);
   const [IsUser, setIsUser] = useState(true);
-  const [UserName, setUserName] = useState(UserTurn);
+  const [UserName, setUserName] = useState("");
   const [tableState, setTableState] = useState(Table);
   const [{ isEnd, state }, setEndState] = useState({
     isEnd: false,
     state: "",
   });
+  useEffect(()=>{
+    setUserName(Users[NumberState % 2 ? 1 : 0].name)
+  },[]);
   const onUserLeave = () => {
     /*     FirebaseLogOut().then(() => {
       deleteServer(pathNameState)
@@ -83,13 +87,13 @@ const TicTacToe = ({ MainData }) => {
   const onWinHandlerState = () => {
     setEndState({
       isEnd: true,
-      state: "You win",
+      state: true,
     });
   };
   const onTieHandlerState = () => {
     setEndState({
       isEnd: true,
-      state: "Tie",
+      state: false,
     });
   };
   useEffect(() => {
@@ -153,18 +157,8 @@ const TicTacToe = ({ MainData }) => {
     // eslint-disable-next-line
   }, [tableState]);
   useEffect(() => {
-    NumberState > 0 &&
-      success(`¡${Users[NumberState % 2 ? 0 : 1].name} ha movido!`);
     NumberState === 0 && success(`¡${Users[0].name} Inicia!`, 5);
   }, []);
-  useEffect(() => {
-    NumberState > 0 &&
-      success(`¡${Users[NumberState % 2 ? 0 : 1].name} ha movido!`);
-    NumberState === 0 && success(`¡${Users[0].name} Inicia!`, 5);
-  }, []);
-  useEffect(()=>{
-    setUserName(UserTurn)
-  },[UserTurn])
   const onHandleClick = (number, e) => {
     if (!e.target.style.background) {
       setTurnState(turnState + 1);
@@ -192,37 +186,40 @@ const TicTacToe = ({ MainData }) => {
     isOn && isOn ? (
       <>
         {isEnd ? (
-          <div>
-            {state}
-            <br />
-            <h1 style={{ color: "white" }}>{UserTurn} ganó</h1>
-            <button
-              onClick={() => {
-                tableGameHandler(
-                  [
-                    { box: 1, color: "1" },
-                    { box: 2, color: "2" },
-                    { box: 3, color: "3" },
-                    { box: 4, color: "4" },
-                    { box: 5, color: "5" },
-                    { box: 6, color: "6" },
-                    { box: 7, color: "7" },
-                    { box: 8, color: "8" },
-                    { box: 9, color: "8" },
-                  ],
-                  -1,
-                  Users[0].name,
-                  id
-                );
-                setEndState({
-                  isEnd: false,
-                  state: "",
-                });
-              }}
-            >
-              Reiniciar
-            </button>
-          </div>
+          <OnWinUser
+            state={state}
+            UserInfo={Users[NumberState % 1 ? 0 : 0]}
+            Button={
+              <button
+              className="btn btn-danger"
+                onClick={() => {
+                  tableGameHandler(
+                    [
+                      { box: 1, color: "1" },
+                      { box: 2, color: "2" },
+                      { box: 3, color: "3" },
+                      { box: 4, color: "4" },
+                      { box: 5, color: "5" },
+                      { box: 6, color: "6" },
+                      { box: 7, color: "7" },
+                      { box: 8, color: "8" },
+                      { box: 9, color: "8" },
+                    ],
+                    -1,
+                    Users[0].name,
+                    id
+                  );
+                  setEndState({
+                    isEnd: false,
+                    state: "",
+                  });
+                }}
+              >
+                Reiniciar
+              </button>
+            }
+            UserTurn={UserTurn}
+          />
         ) : IsUser ? (
           <>
             <Navbar />
@@ -237,16 +234,14 @@ const TicTacToe = ({ MainData }) => {
             <div
               style={{
                 color: "white",
-                border: "solid",
                 marginTop: "30px",
                 textAlign: "center",
-                fontSize: "1.2rem",
-                fontWeight: "900",
+                fontSize: "1.2rem"
               }}
             >
-              Turno de: {UserName}
+              Turno de: <b>{UserName}</b>
             </div>
-            <div className="TicTactToe-container">
+            <div className="TicTactToe-container animate__animated animate__pulse">
               {Table.map(({ box, color }) => (
                 <div
                   style={{ background: `${color}` }}
