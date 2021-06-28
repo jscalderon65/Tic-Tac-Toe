@@ -1,24 +1,27 @@
-.OnWinUser-container{
-    display:flex;
-    justify-content:center;
-}
-.OnWinUser-profile{
-    width:50vw;
+.OnWinUser-container {
+    display: flex;
+    justify-content: center;
 }
 
-.OnWinUser-profile-title{
-    margin-top: 20px;
-    display:flex;
-    justify-content:center;
+.OnWinUser-profile {
+    width: 50vw;
 }
-.OnWinUser-profile-title>img{
-    width:150px;
-    height:150px;
+
+.OnWinUser-profile-title {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.OnWinUser-profile-title>img {
+    width: 150px;
+    height: 150px;
     border-radius: 100%;
 }
-.OnWinUser-profile-body{
+
+.OnWinUser-profile-body {
     text-align: center;
     margin-top: 20px;
     font-size: 1.5rem;
-    font-weight:900;
+    font-weight: 900;
 }

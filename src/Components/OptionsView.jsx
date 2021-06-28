@@ -14,16 +14,17 @@ const OptionsView = () => {
   const [UserData, isOn] = useFirebaseUser(firebase);
   const onCreateServer = () => {
     createServer().then((resp) => {
-      UserData&&addUser(resp, [
-        {
-          name: UserData.displayName,
-          email: UserData.email,
-          photoUrl: UserData.photoURL,
-          uid: UserData.uid,
-        },
-      ]).then(() => {
-        history.push(`/game/${resp}`);
-      });
+      UserData &&
+        addUser(resp, [
+          {
+            name: UserData.displayName,
+            email: UserData.email,
+            photoUrl: UserData.photoURL,
+            uid: UserData.uid,
+          },
+        ]).then(() => {
+          history.push(`/game/${resp}`);
+        });
     });
   };
   const onGoServer = () => {

@@ -32,9 +32,6 @@ const TicTacToe = ({ MainData }) => {
     isEnd: false,
     state: "",
   });
-  useEffect(()=>{
-    setUserName(Users[NumberState % 2 ? 1 : 0].name)
-  },[]);
   const onUserLeave = () => {
     /*     FirebaseLogOut().then(() => {
       deleteServer(pathNameState)
@@ -97,6 +94,10 @@ const TicTacToe = ({ MainData }) => {
     });
   };
   useEffect(() => {
+    setUserName(Users[NumberState % 2 ? 1 : 0].name);
+       // eslint-disable-next-line
+  }, []);
+  useEffect(() => {
     const onWinHandler = () => {
       if (
         tableState[0].color === tableState[1].color &&
@@ -158,6 +159,7 @@ const TicTacToe = ({ MainData }) => {
   }, [tableState]);
   useEffect(() => {
     NumberState === 0 && success(`¡${Users[0].name} Inicia!`, 5);
+       // eslint-disable-next-line
   }, []);
   const onHandleClick = (number, e) => {
     if (!e.target.style.background) {
@@ -191,7 +193,7 @@ const TicTacToe = ({ MainData }) => {
             UserInfo={Users[NumberState % 1 ? 0 : 0]}
             Button={
               <button
-              className="btn btn-danger"
+                className="btn btn-danger"
                 onClick={() => {
                   tableGameHandler(
                     [
@@ -236,7 +238,7 @@ const TicTacToe = ({ MainData }) => {
                 color: "white",
                 marginTop: "30px",
                 textAlign: "center",
-                fontSize: "1.2rem"
+                fontSize: "1.2rem",
               }}
             >
               Turno de: <b>{UserName}</b>

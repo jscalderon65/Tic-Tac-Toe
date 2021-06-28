@@ -11,12 +11,19 @@ const NavbarTicTacToe = ({ ButtonLeave, Users }) => {
           }}
         >
           <img
-            style={{ borderRadius: "100%",objectFit:"cover" }}
+            style={{ borderRadius: "100%", objectFit: "cover" }}
             src={Users[0].photoUrl}
             alt={Users[0].name}
           />
         </div>
-        <div style={{ flex: "1", display: "flex", justifyContent: "center",textAlign:"center" }}>
+        <div
+          style={{
+            flex: "1",
+            display: "flex",
+            justifyContent: "center",
+            textAlign: "center",
+          }}
+        >
           {Users[0].name}
         </div>
       </div>
@@ -30,12 +37,19 @@ const NavbarTicTacToe = ({ ButtonLeave, Users }) => {
           }}
         >
           <img
-            style={{ borderRadius: "100%",objectFit:"cover" }}
+            style={{ borderRadius: "100%", objectFit: "cover" }}
             src={Users[1].photoUrl}
             alt={Users[1].name}
           />
         </div>
-        <div style={{ flex: "1", display: "flex", justifyContent: "center",textAlign:"center" }}>
+        <div
+          style={{
+            flex: "1",
+            display: "flex",
+            justifyContent: "center",
+            textAlign: "center",
+          }}
+        >
           {Users[1].name}
         </div>
       </div>

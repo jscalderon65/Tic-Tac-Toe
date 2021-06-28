@@ -1,19 +1,22 @@
-.ShareGame-container{
+.ShareGame-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 200px;
 }
-.ShareGame-whatsapp{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:3rem;
+
+.ShareGame-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
 }
-.ShareGame-link{
-    display:flex;
-    align-items:center;
-    justify-content:center;
+
+.ShareGame-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.ShareGame-link>button{
+
+.ShareGame-link>button {
     font-size: 1.2rem;
 }

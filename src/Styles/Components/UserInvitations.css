@@ -1,24 +1,27 @@
-.UserInvitation-container{
-    color:white;
+.UserInvitation-container {
+    color: white;
 }
-.UserInvitation-title{
-    padding:20px;
+
+.UserInvitation-title {
+    padding: 20px;
     font-size: 1.5rem;
     margin-bottom: 20px;
-    display:flex;
+    display: flex;
     text-align: center;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     flex-flow: column;
 }
-.UserInvitation-title>img{
-    width:120px;
-    height:120px;
+
+.UserInvitation-title>img {
+    width: 120px;
+    height: 120px;
     margin-bottom: 20px;
     border-radius: 100%;
     object-fit: cover;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.9);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
 }
-.UserInvitation-buttons{
-    text-align:center;
+
+.UserInvitation-buttons {
+    text-align: center;
 }

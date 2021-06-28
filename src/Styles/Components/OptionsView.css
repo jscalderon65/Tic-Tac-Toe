@@ -1,144 +1,158 @@
-.OptionsView-container{
+.OptionsView-container {
     height: 100vh;
-    display:grid;
+    display: grid;
     grid-template-rows: 60px 1fr;
 }
-.OptionsView-navbar{
-    box-shadow: 2px 2px 10px rgba(0,0,0,.2);
-    background-color:#161B22;
-    display:flex;
+
+.OptionsView-navbar {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, .2);
+    background-color: #161B22;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left:20px;
-    padding-right:20px;
+    padding-left: 20px;
+    padding-right: 20px;
     min-height: 60px;
 }
-.OptionsView-navbar-brand{
-    color:white;
+
+.OptionsView-navbar-brand {
+    color: white;
     font-size: 1.5rem;
     font-weight: 900;
     cursor: pointer;
 }
-.OptionsView-navbar-icons{
-    color:white;
+
+.OptionsView-navbar-icons {
+    color: white;
     font-size: 2.5rem;
     cursor: pointer;
     display: flex;
     align-items: center;
 }
-.OptionsView-options{
+
+.OptionsView-options {
     background-color: #090C10;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.OptionsView-box{
-    box-shadow: 2px 2px 10px rgba(0,0,0,.2);
-    display:flex;
+.OptionsView-box {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, .2);
+    display: flex;
     border-radius: 5px;
     padding-top: 20px;
     padding-bottom: 20px;
     flex-flow: column;
-    min-width:200px;
-    min-width:30vw;
-    background-color:#161B22;
-    height:40vh;
-}
-.OptionsView-box>div{
-    flex:1;
+    min-width: 200px;
+    min-width: 30vw;
+    background-color: #161B22;
+    height: 40vh;
 }
 
-.OptionsView-input{
+.OptionsView-box>div {
+    flex: 1;
+}
+
+.OptionsView-input {
     width: 60%;
-    height:50px;
-    font-size:1.25rem;
+    height: 50px;
+    font-size: 1.25rem;
     font-weight: 900;
     text-align: center;
 }
 
-.OptionsView-search{
-    display:flex;
-    align-items:center;
-    justify-content:center;
+.OptionsView-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.OptionsView-search>button{
-    height:50px;
-    color:white;
+.OptionsView-search>button {
+    height: 50px;
+    color: white;
     width: 20%;
     background-color: #090C10;
-    font-size:1.25rem;
-    transition:transform 0.3s;
-}
-.OptionsView-search>button:hover{
-    color:white;
+    font-size: 1.25rem;
+    transition: transform 0.3s;
 }
 
-.OptionsView-create{
-    display:flex;
-    align-items:center;
-    justify-content:center;
+.OptionsView-search>button:hover {
+    color: white;
 }
 
-.OptionsView-create>button{
-    color:white;
-    height:50px;
-    display:flex;
-    background-color: #090C10;
-    align-items:center;
-    justify-content:space-around;
-    width: 60%;
-    font-size:1.25rem;
-    transition:transform 0.3s;
-}
-.OptionsView-create>button:hover{
-    color:white;
-    transform: translateY(-2px);
-}
-
-.OptionsView-close{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-.OptionsView-close>button{
-    color:white;
-    width: 40%;
-    height:50px;
-    display:flex;
-    background-color: #090C10;
-    align-items:center;
-    justify-content:space-around;
-    font-size:1.25rem;
-    transition:transform 0.3s;
-}
-.OptionsView-close>button:hover{
-    color:white;
-    transform: translateY(-2px);
-}
-@media(max-width:600px){
-    .OptionsView-input{
-        font-size:1rem;
-    }
-    .OptionsView-box{
-        width:90vw;
-    }
-    .OptionsView-search>button{
-        font-size:1rem;
-    }
-    .OptionsView-create>button{
-        font-size:1rem;
-    }
-    .OptionsView-close>button{
-        font-size:1rem;
-    }
-}
-.OptionView-wait-container{
-    width:100vw;
-    height:100vh;
+.OptionsView-create {
     display: flex;
-    justify-content:center;
-    align-items:center;
+    align-items: center;
+    justify-content: center;
+}
+
+.OptionsView-create>button {
+    color: white;
+    height: 50px;
+    display: flex;
+    background-color: #090C10;
+    align-items: center;
+    justify-content: space-around;
+    width: 60%;
+    font-size: 1.25rem;
+    transition: transform 0.3s;
+}
+
+.OptionsView-create>button:hover {
+    color: white;
+    transform: translateY(-2px);
+}
+
+.OptionsView-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.OptionsView-close>button {
+    color: white;
+    width: 40%;
+    height: 50px;
+    display: flex;
+    background-color: #090C10;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.25rem;
+    transition: transform 0.3s;
+}
+
+.OptionsView-close>button:hover {
+    color: white;
+    transform: translateY(-2px);
+}
+
+@media(max-width:600px) {
+    .OptionsView-input {
+        font-size: 1rem;
+    }
+
+    .OptionsView-box {
+        width: 90vw;
+    }
+
+    .OptionsView-search>button {
+        font-size: 1rem;
+    }
+
+    .OptionsView-create>button {
+        font-size: 1rem;
+    }
+
+    .OptionsView-close>button {
+        font-size: 1rem;
+    }
+}
+
+.OptionView-wait-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
