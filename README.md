@@ -5,7 +5,7 @@ _Aplicación web que permite jugar, crear y compartir y partidas del conocido ju
 ## Despliegue 📦
 
 _El despliegue se realizo con Netlify:_
-* [Tic-Tac-Toe](https://es.reactjs.org/) -  Link a la aplicación. 
+* [Tic-Tac-Toe](https://tictactoe-jscalderon65.netlify.app/) -  Link a la aplicación. 
 ## Construido con 🛠️
 
 _Tecnologías usadas para la creación del proyecto:_
