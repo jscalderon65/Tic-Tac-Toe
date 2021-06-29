@@ -1,15 +1,14 @@
-# OBJETIVOS
+# Tic-Tac-Toe
 
-## -> Botón de abandonar.
+_Aplicación web que permite jugar, crear y compartir y partidas del conocido juego de Tic-Tac-Toe, en tiempo real, con quien quieras._
 
-## -> Botón de finalizar partida.
+## Despliegue 📦
 
-## -> Validar que usuario no pueda jugar cuando no es su turno.
+_El despliegue se realizo con Netlify:_
+* [Tic-Tac-Toe](https://es.reactjs.org/) -  Link a la aplicación. 
+## Construido con 🛠️
 
-## -> Añadir modal explicativo
+_Tecnologías usadas para la creación del proyecto:_
 
-## -> Desplegar en Netlify
-
-## -> Agregar README
-
-## -> Crear video explicativo
+* [React Js](https://es.reactjs.org/) -  biblioteca de JavaScript. 
+* [Firebase, Cloud Firestore](https://firebase.google.com/docs/firestore?hl=es) - Base de datos.
