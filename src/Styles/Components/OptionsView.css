@@ -127,6 +127,13 @@
     transform: translateY(-2px);
 }
 
+.OptionsView-navbar-modal{
+    font-size:1rem;
+    color:white;
+    text-align:justify;
+    padding:10px;
+}
+
 @media(max-width:600px) {
     .OptionsView-input {
         font-size: 1rem;

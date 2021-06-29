@@ -8,7 +8,7 @@ const UserInvitation = ({ Users, onUserIngress }) => {
       </div>
       <div className="UserInvitation-buttons">
         <button className="btn btn-primary" onClick={onUserIngress}>
-          <i class="fab fa-google"></i> Ingresar con Google
+          <i className="fab fa-google"></i> Ingresar con Google
         </button>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar } from "./index.js";
-const OnWinUser = ({ UserTurn, Button, state, UserInfo }) => {
+const OnWinUser = ({ UserTurn, ButtonRe, ButtonLeave, state, UserInfo }) => {
   return (
     <>
       <Navbar />
@@ -11,14 +11,32 @@ const OnWinUser = ({ UserTurn, Button, state, UserInfo }) => {
               <img src={UserInfo.photoUrl} alt={UserTurn} />
             </div>
             <div className="OnWinUser-profile-body">
-              {UserTurn} ganó
+              {UserTurn} ganó la partida
+              <br />
+              <i
+                style={{ fontSize: "5rem", marginTop: "20px" }}
+                className="fas fa-award"
+              ></i>
               <br />
               <br />
-              {Button}
+              {ButtonRe}
+              <br />
+              <br />
+              {ButtonLeave}
             </div>
           </div>
         ) : (
-          <h1>Se ha empatado</h1>
+          <div className="OnWinUser-tie-container">
+            Juego empatado
+            <br/>
+            <i style={{ fontSize: "5rem", marginTop: "20px" }} className="fas fa-handshake"></i>
+            <br />
+            <br />
+            {ButtonRe}
+            <br />
+            <br />
+            {ButtonLeave}
+          </div>
         )}
       </div>
     </>

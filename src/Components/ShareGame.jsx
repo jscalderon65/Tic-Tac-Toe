@@ -33,7 +33,7 @@ const ShareGame = () => {
   return (
     <>
       <button onClick={showModal} className="btn btn-light">
-        Compartir partida <i class="fas fa-share-square"></i>
+        Compartir partida <i className="fas fa-share-square"></i>
       </button>
       <Modal
         title={
@@ -68,7 +68,7 @@ const ShareGame = () => {
               onClick={() => copyButton("copy-text")}
               className="btn btn-primary"
             >
-              Copiar url <i class="fab fa-creative-commons-share"></i>
+              Copiar url <i className="fab fa-creative-commons-share"></i>
             </button>
           </div>
         </div>

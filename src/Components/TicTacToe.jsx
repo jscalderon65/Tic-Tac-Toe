@@ -33,7 +33,7 @@ const TicTacToe = ({ MainData }) => {
     state: "",
   });
   const onUserLeave = () => {
-    /*     FirebaseLogOut().then(() => {
+    FirebaseLogOut().then(() => {
       deleteServer(pathNameState)
         .then(() => {
           history.push(`/options`);
@@ -41,8 +41,8 @@ const TicTacToe = ({ MainData }) => {
         .catch(() => {
           history.push(`/options`);
         });
-    }); */
-    tableGameHandler(
+    });
+    /*     tableGameHandler(
       [
         { box: 1, color: "1" },
         { box: 2, color: "2" },
@@ -57,7 +57,7 @@ const TicTacToe = ({ MainData }) => {
       -1,
       Users[0].name,
       id
-    );
+    ); */
   };
   useEffect(() => {
     const isInTheGame = (userData) => {
@@ -93,9 +93,14 @@ const TicTacToe = ({ MainData }) => {
       state: false,
     });
   };
+  const turnHandler = (e, box) => {
+    userData && userData.displayName === Users[NumberState % 2 ? 1 : 0].name
+      ? onHandleClick(box, e)
+      : success("¡No es tu turno!");
+  };
   useEffect(() => {
     setUserName(Users[NumberState % 2 ? 1 : 0].name);
-       // eslint-disable-next-line
+    // eslint-disable-next-line
   }, []);
   useEffect(() => {
     const onWinHandler = () => {
@@ -141,25 +146,16 @@ const TicTacToe = ({ MainData }) => {
         onWinHandlerState();
       }
     };
-    /* const isTie = () => {
-      let equal = true;
-      for (let i = 0; i < tableState.length - 1; i++) {
-        if (typeof tableState[i] !== typeof tableState[i + 1]) {
-          equal = false;
-          break;
-        }
-      }
-      return equal;
-    }; 
-      if (NumberState > 0 && isTie()) {
+
+    if (NumberState >= 9) {
       onTieHandlerState();
-    } */
+    }
     onWinHandler();
     // eslint-disable-next-line
   }, [tableState]);
   useEffect(() => {
     NumberState === 0 && success(`¡${Users[0].name} Inicia!`, 5);
-       // eslint-disable-next-line
+    // eslint-disable-next-line
   }, []);
   const onHandleClick = (number, e) => {
     if (!e.target.style.background) {
@@ -190,10 +186,13 @@ const TicTacToe = ({ MainData }) => {
         {isEnd ? (
           <OnWinUser
             state={state}
-            UserInfo={Users[NumberState % 1 ? 0 : 0]}
-            Button={
+            UserInfo={Users[NumberState % 2 ? 0 : 1]}
+            ButtonLeave={<button className="btn btn-danger" onClick={onUserLeave}>
+            Abandonar partida <i className="fas fa-sign-out-alt"></i>
+          </button>}
+            ButtonRe={
               <button
-                className="btn btn-danger"
+                className="btn btn-primary"
                 onClick={() => {
                   tableGameHandler(
                     [
@@ -217,7 +216,7 @@ const TicTacToe = ({ MainData }) => {
                   });
                 }}
               >
-                Reiniciar
+                Reiniciar <i className="fas fa-redo"></i>
               </button>
             }
             UserTurn={UserTurn}
@@ -229,7 +228,7 @@ const TicTacToe = ({ MainData }) => {
               Users={Users}
               ButtonLeave={
                 <button className="btn btn-danger" onClick={onUserLeave}>
-                  Abandonar <i class="fas fa-sign-out-alt"></i>
+                  Abandonar partida <i className="fas fa-sign-out-alt"></i>
                 </button>
               }
             />
@@ -246,11 +245,23 @@ const TicTacToe = ({ MainData }) => {
             <div className="TicTactToe-container animate__animated animate__pulse">
               {Table.map(({ box, color }) => (
                 <div
-                  style={{ background: `${color}` }}
-                  onClick={(e) => onHandleClick(box, e)}
+                  style={{
+                    background: `${
+                      color === "blue"
+                        ? "#03045e"
+                        : color === "red"
+                        ? "#e63946"
+                        : ""
+                    }`,
+                  }}
+                  onClick={(e) => turnHandler(e, box)}
                   key={box}
                 >
-                  {box}
+                  {color === "red" ? (
+                    <i className="fas fa-times"></i>
+                  ) : color === "blue" ? (
+                    <i className="far fa-circle"></i>
+                  ) : null}
                 </div>
               ))}
             </div>

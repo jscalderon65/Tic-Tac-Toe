@@ -108,7 +108,7 @@ const WaitRoom = ({ MainData, pathNameState }) => {
             <div className="WaitRoom-wait-view-buttons">
               <ShareGame />
               <button className="btn btn-danger" onClick={onUserLeave}>
-                Abandonar <i class="fas fa-sign-out-alt"></i>
+                Abandonar <i className="fas fa-sign-out-alt"></i>
               </button>
             </div>
           </div>

@@ -53,14 +53,14 @@ const OptionsView = () => {
             <div className="OptionsView-create" onClick={onCreateServer}>
               <button className="btn">
                 Crear partida
-                <i class="fas fa-gamepad"></i>
+                <i className="fas fa-gamepad"></i>
               </button>
             </div>
 
             <div className="OptionsView-close" onClick={FirebaseLogOut}>
               <button className="btn">
                 Salir
-                <i class="fas fa-sign-out-alt"></i>
+                <i className="fas fa-sign-out-alt"></i>
               </button>
             </div>
           </div>
