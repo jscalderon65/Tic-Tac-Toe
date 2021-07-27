@@ -23,8 +23,8 @@
 
 @media(max-width:600px) {
     .TicTactToe-container {
-        width: 50vh;
-        height: 50vh;
+        width: 40vh;
+        height: 40vh;
     }
     .TicTactToe-container {
         margin: 20px auto 60px;
